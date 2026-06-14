@@ -1,19 +1,5 @@
-/*
-VILLEGAS GOMEZ ALEJANDRA
-ESCUELA SUPERIOR DE COMPUTO
-MATERIA: Analisis y diseño de algoritmos
-Algoritmo BubbleSort Simple
-FECHA: 07/03/2023
-*/
-
 #include <stdio.h>			//libreria estandar de entrada y salida
 #include <stdlib.h>			//libreria estandar  (para la memoria dinamica)
-
-/*El ordenamiento burbuja simple, consta de comparar cada 
-elemento con el siguiente, intercambiando sus posiciones si
-no estan ordenados correctamente;
-iterando el numero de elementos a ordenar*/
-
 void BurbujaS(int *A, int n);			//Prototipo de la funcion en que se encuentra nuestro algoritmo
 
 int main(int argc, char *argv[]) {

@@ -9,13 +9,13 @@ int main(int argc, char *argv[]){
 	int n=atoi(argv[1]);
     int *arreglo;
     int i;
-    arreglo = malloc(n*sizeof(int));//creación del arreglo dinámico
+    arreglo = malloc(n*sizeof(int));//creaciï¿½n del arreglo dinï¿½mico
 	for(i=0;i<n;i++){
     	scanf("%d",&arreglo[i]);//lee los datos del archivo numeros10millones.txt
 	}
-    mergeSort(arreglo, 0, n-1);//llamado a la función merge, utiliza el arreglo y su tamaño
+    mergeSort(arreglo, 0, n-1);//llamado a la funciï¿½n merge, utiliza el arreglo y su tamaï¿½o
     for(i=0; i < n; i++)
-        printf("%d\n", arreglo[i]);//impresión de los números ordenados
+        printf("%d\n", arreglo[i]);//impresiï¿½n de los nï¿½meros ordenados
     free(arreglo);//liberar el espacio del arreglo
     return 0;
 }

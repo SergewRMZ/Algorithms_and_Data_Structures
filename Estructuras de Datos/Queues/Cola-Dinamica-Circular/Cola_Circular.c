@@ -5,21 +5,20 @@
 #include <locale.h>
 
 // Estructura - Cola
-
 typedef struct nodo{
 	int dato;
 	int contador;
 	struct nodo *next;
 } Nodo;
 
-// Prototipos de Funciones 
+// Function Declarations 
 
 void encolar(Nodo **p, int valor);
 int desencolar(Nodo **p);
 void mostrarCola(Nodo *p);
 int colaVacia(Nodo *p);
 
-// Función Principal 
+// Main Function
 
 int main(){
 	setlocale(LC_CTYPE, "SPANISH");
@@ -29,24 +28,23 @@ int main(){
 	encolar(&cola, 2);
 	encolar(&cola, 3);
 
-	// Menú //
 	while(1){
 		system("cls");
 		puts("Estructuras de Datos - Cola con lista circular\n");
 		puts("1. Encolar");
 		puts("2. Desencolar");
 		puts("3. Visualizar el primer elemento de la cola");
-		puts("4. Cola Vacía");
+		puts("4. Cola Vacï¿½a");
 		puts("5. Mostrar todos los elementos de la cola");
 		puts("6. Cantidad de elementos de la cola");
 		puts("7. Salir del Programa");
-		printf("Ingrese la opción a la que deea ingresar: ");
+		printf("Ingrese la opciï¿½n a la que deea ingresar: ");
 		scanf("%d", &opcion); fflush(stdin);
 		
 		switch(opcion){
 			case 1: {
 				system("cls");
-				printf("Ingrese el número que desea ingresar: ");
+				printf("Ingrese el nï¿½mero que desea ingresar: ");
 				scanf("%d", &dato);
 				encolar(&cola, dato);
 				break;
@@ -62,7 +60,7 @@ int main(){
 			case 3: {
 				system("cls");
 				if(colaVacia(cola)){
-					printf("Aún no hay elementos en la cola\n");
+					printf("Aï¿½n no hay elementos en la cola\n");
 				}	else{
 					printf("El primer elemento de la cola es: %d\n", cola->next->dato);
 				}	break;
@@ -71,7 +69,7 @@ int main(){
 			case 4:{
 				system("cls");
 				if(colaVacia(cola)){
-					printf("La cola está vacía, aún no hay elementos\n");
+					printf("La cola estï¿½ vacï¿½a, aï¿½n no hay elementos\n");
 				}	else{
 					mostrarCola(cola);
 				}	break;
@@ -88,7 +86,7 @@ int main(){
 				if(!colaVacia(cola)){
 					printf("Actualmente hay %d elementos en la cola\n", cola->contador);
 				}	else{
-					printf("La cola está vacía, aún no hay elementos\n");
+					printf("La cola estï¿½ vacï¿½a, aï¿½n no hay elementos\n");
 				}	break;
 			}
 			
@@ -111,16 +109,16 @@ int main(){
 void encolar(Nodo **p, int valor){
 	Nodo *nuevo = (Nodo*) malloc(sizeof(Nodo));
 	if(nuevo == NULL){
-		fprintf(stderr, "Error al intentar asignas memoria dinámica\n");
+		fprintf(stderr, "Error al intentar asignas memoria dinï¿½mica\n");
 	}
 	
-	/* Una cola con lista enlazada, consiste en que el último nodo apunta al primer elemento de la cola.
-	Entonces debemos mantener a P apuntando al último nodo de la lista para que por medio de p->next 
+	/* Una cola con lista enlazada, consiste en que el ï¿½ltimo nodo apunta al primer elemento de la cola.
+	Entonces debemos mantener a P apuntando al ï¿½ltimo nodo de la lista para que por medio de p->next 
 	podamos acceder al primer elemento de la cola. */
 	
 	nuevo->dato = valor;
 	if(colaVacia(*p)){
-		nuevo->next = nuevo; // Hacemos que el primer nodo apunte a sí mismo
+		nuevo->next = nuevo; // Hacemos que el primer nodo apunte a sï¿½ mismo
 	} else{
 		nuevo->next = (*p)->next; // Hacemos que el apuntador del nuevo elemento apunte al principio de la cola
 		(*p)->next = nuevo;	
