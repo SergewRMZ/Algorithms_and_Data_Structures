@@ -10,3 +10,21 @@ Implementaciones de estructuas de datos en C manejo de memoria dinámica.
 * Automata de Pila
 * Árboles (Binario de búsqueda, AVL)
 * Gráfos
+
+## Algoritmo de Huffman
+Implementación del algoritmo de Huffman utilizando estructura de datos (heap) para la implementación
+de una aplicación de línea de comandos para la compresión de archivos mediante huffman.
+
+## Algoritmos de Ordenamiento
+Implementación en C de los algoritmos de ordenamiento clásicos.
+* BubbleSort
+* HeapSort
+* MergeSort
+* InsertionSort
+* QuickSort
+* SelectionSort
+* ShellSort
+
+## Gráfos
+* Búsqueda en profundidad (DFS)
+* Búsqueda en anchura (BFS)
